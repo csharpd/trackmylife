@@ -11,8 +11,8 @@
 				<input id="enter" type="button" value="submit" />
 			</form>
 			<h2>List of Books I have read</h2>
-			<section id='books'>
-			</section>
+				<ul>
+				</ul>
 		</main>
 		<script src="javascript/jquery-2.1.1.min.js"></script>
 		<script src="javascript/trackmylife.js"></script>
@@ -20,11 +20,17 @@
 			$(document).ready(function(){
 				$('#enter').on('click',function(){
 					var myinput = $('#book-input').val();
-					console.log(myinput);
-					$('ul').append(myinput)
+					$('ul').append('<li>' + myinput + '</li>');
 				});
 		});
-
 			</script>
 	</body>
 </html>
+
+<!-- 			$(document).ready(function(){
+				$('#enter').on('click',function(){
+					var myinput = $('#book-input').val();
+					console.log(myinput);
+					$('ul').append(myinput)
+				});
+		}); -->
