@@ -1,19 +1,30 @@
 <html>
 	<head>
 		<title>Books</title>
-		<link href='style.css' rel='stylesheet'>
+		<link href='css/style.css' rel='stylesheet'>
 	</head>
 	<body>
-		<h1>Read a new book?</h1>
-		<form>
-			<input type="text" name='book' placeholder="type here" />
-			<input type="button" value="submit" />
-		</form>
-		<h2>List of Books I have read</h2>
-		<ul>
-			<li></li>
-		</ul>
-		<script src="javascript/trackmylife.js"></script>
+		<main>
+			<h1>Read a new book?</h1>
+			<form>
+				<input id="book-input" type="text" name='book' placeholder="type here" />
+				<input id="enter" type="button" value="submit" />
+			</form>
+			<h2>List of Books I have read</h2>
+			<section id='books'>
+			</section>
+		</main>
 		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/trackmylife.js"></script>
+		<script >
+			$(document).ready(function(){
+				$('#enter').on('click',function(){
+					var myinput = $('#book-input').val();
+					console.log(myinput);
+					$('ul').append(myinput)
+				});
+		});
+
+			</script>
 	</body>
 </html>
